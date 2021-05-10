@@ -1,4 +1,3 @@
-
 export default {
   name: "property",
   title: "Property",
@@ -41,5 +40,22 @@ export default {
     },
     { name: "id", title: "ID", type: "number" },
     { name: "description", title: "Description", type: "string" },
+    {
+      name: "host",
+      title: "host",
+      type: "host",
+    },
+    {
+      name: "reviews",
+      title: "Reviews",
+      type: "array",
+      of: [{ type: "review" }],
+    },
   ],
+  preview: {
+    select: {
+      title: "title",
+      pricePerNight: "pricePerNight",
+    },
+  },
 };
