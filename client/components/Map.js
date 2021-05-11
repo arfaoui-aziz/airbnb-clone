@@ -5,7 +5,6 @@ export default function Map({ location }) {
   mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_API_KEY;
 
   useEffect(() => {
-    console.log(location);
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/streets-v11",
@@ -22,7 +21,7 @@ export default function Map({ location }) {
       <div
         className="map-container"
         style={{
-          width: 400,
+          width: "100%",
           height: 400,
         }}
         ref={mapContainer}
