@@ -59,7 +59,6 @@ export default function Property({
 
 export const getServerSideProps = async (pageContext) => {
   const pageSlug = pageContext.query.slug;
-  console.log(pageSlug);
 
   const query = `*[_type == "property" && slug.current == $pageSlug][0]{
       title,
@@ -87,7 +86,7 @@ export const getServerSideProps = async (pageContext) => {
   }`;
 
   const property = await sanityClient.fetch(query, { pageSlug });
-  console.log("****", property);
+
   if (!property) {
     return { props: null, notFound: true };
   } else {
