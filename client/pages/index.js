@@ -4,7 +4,11 @@ import styles from "../styles/Home.module.css";
 import { sanityClient } from "../sanity";
 export default function Home({ properties }) {
   console.log(properties);
-  return <></>;
+  return (
+    <>
+      <h1>Home</h1>
+    </>
+  );
 }
 
 export const getServerSideProps = async () => {

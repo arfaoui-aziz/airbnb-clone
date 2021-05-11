@@ -13,7 +13,7 @@ Topics covered:
 - Next.js
 - ServerSideProps
 - Sanity SDK
-- Sanity query language
+- Sanity query language GROQ
 - React Hooks
 
 ## Built With
