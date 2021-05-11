@@ -1,11 +1,13 @@
 import React from "react";
 import { sanityClient } from "../../sanity";
 import { isPlural } from "../../utils";
+import Image from "../../components/Image";
 export default function Property({
   title,
   location,
   propertyType,
   mainImage,
+  images,
   pricePerNight,
   bedrooms,
   description,
@@ -17,6 +19,17 @@ export default function Property({
       <h1>
         <b>{title}</b>
       </h1>
+      <p>
+        {reviews?.length} review{isPlural(reviews?.length)}
+      </p>
+      <div className="images-section">
+        <Image identifier="main-image" image={mainImage} />
+        <div className="sub-images-section">
+          {images?.map((i, image) => (
+            <Image identifier="image" image={image} key={i} />
+          ))}
+        </div>
+      </div>
       <h2>
         <b>
           {propertyType} hosted by {host?.name}
@@ -47,7 +60,7 @@ export default function Property({
       <div className="price-box">
         <h2>$ {pricePerNight}</h2>
         <h4>
-          {reviews.length} review{isPlural(reviews.length)}
+          {reviews?.length} review{isPlural(reviews?.length)}
         </h4>
         <div className="button" onClick={() => {}}>
           Change Dates

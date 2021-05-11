@@ -32,4 +32,27 @@ body {
   color: rgb(255, 255, 255);
   text-align: center;
   background: linear-gradient(135deg, rgba(255, 56, 92) 20%, rgb(189, 30, 89));
+  cursor: pointer;
+}
+
+.images-section {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sub-images-section {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 50%;
+  height: 270px;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 100%;
 }
