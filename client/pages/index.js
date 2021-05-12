@@ -4,6 +4,7 @@ import DashboardMap from "../components/DashboardMap";
 import { sanityClient, urlFor } from "../sanity";
 import { isPlural } from "../utils";
 export default function Home({ properties }) {
+  console.log(properties);
   return (
     <>
       <Head>
