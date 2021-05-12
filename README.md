@@ -8,7 +8,7 @@ Topics covered:
 - Types
 - Content Management Systems
 - Geolocation
-- Google Maps API
+- Mapbox API
 - Clustering Markers
 - Next.js
 - ServerSideProps
