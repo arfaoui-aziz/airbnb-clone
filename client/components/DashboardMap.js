@@ -7,9 +7,6 @@ export default function DashboardMap({ properties }) {
   let latMoy = 0;
   properties.forEach((property) => {
     lngMoy += property?.location.lng;
-  });
-
-  properties.forEach((property) => {
     latMoy += property?.location.lat;
   });
 
@@ -20,7 +17,7 @@ export default function DashboardMap({ properties }) {
     const map = new mapboxgl.Map({
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/streets-v11",
-      center: [0.1189, 51.522800000000004],
+      center: [lngMoy, latMoy],
       zoom: 8,
     });
 
@@ -38,7 +35,7 @@ export default function DashboardMap({ properties }) {
         className="map-container"
         style={{
           width: "100%",
-          height: 400,
+          height: "106vh",
         }}
         ref={mapContainer}
       />
