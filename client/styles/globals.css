@@ -19,6 +19,7 @@ body {
   height: 40px;
   background-image: url("../images/airbnb-logo.png");
   background-size: 130px;
+  cursor: pointer;
 }
 
 .container {

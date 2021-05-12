@@ -1,22 +1,17 @@
 import Head from "next/head";
-import Image from "next/image";
 import Link from "next/link";
 import { sanityClient, urlFor } from "../sanity";
 import { isPlural } from "../utils";
 export default function Home({ properties }) {
-  console.log(properties);
   return (
     <>
       {properties && (
         <div className="main">
           <div className="feed-container">
             <h1>Places to stay near you </h1>
-            <div className="feed" >
+            <div className="feed">
               {properties.map((property) => (
-                <Link
-                  
-                  href={`property/${property.slug.current}`}
-                >
+                <Link href={`property/${property.slug.current}`}>
                   <div key={property._id} className="card">
                     <img
                       src={urlFor(property.mainImage)}
