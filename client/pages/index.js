@@ -1,10 +1,15 @@
 import Head from "next/head";
 import Link from "next/link";
+import DashboardMap from "../components/DashboardMap";
 import { sanityClient, urlFor } from "../sanity";
 import { isPlural } from "../utils";
 export default function Home({ properties }) {
   return (
     <>
+      <Head>
+        <title>Airbnb Clone</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       {properties && (
         <div className="main">
           <div className="feed-container">
@@ -29,7 +34,9 @@ export default function Home({ properties }) {
                 </Link>
               ))}
             </div>
-            <div className="map"></div>
+            <div className="map">
+              <DashboardMap properties={properties} />
+            </div>
           </div>
         </div>
       )}
