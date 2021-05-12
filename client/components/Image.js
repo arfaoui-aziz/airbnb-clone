@@ -1,5 +1,4 @@
 import { urlFor } from "../sanity";
-
 export default function Image({ identifier, image }) {
   return (
     <div className={identifier}>

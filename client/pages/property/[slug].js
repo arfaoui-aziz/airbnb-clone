@@ -5,6 +5,7 @@ import { isPlural } from "../../utils";
 import Image from "../../components/Image";
 import Review from "../../components/Review";
 import Map from "../../components/Map";
+
 export default function Property({
   title,
   location,
